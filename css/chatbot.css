@@ -1,0 +1,345 @@
+/* Import Google font - Poppins */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;800;900;1000&display=swap');
+
+:root{
+  --color: #2978cb;
+  --bold-lead-color: #7a7a7a;
+  --light-lead-color: #f3f3f3;
+  --main-transition: 0.3s;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+.chatbot-toggler {
+  position: fixed;
+  bottom: 30px;
+  right: 35px;
+  outline: none;
+  border: none;
+  height: 50px;
+  width: 50px;
+  display: flex;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: var(--color);
+  box-shadow: 0px 1px 10px rgb(34, 34, 183);
+  transition: all 0.2s ease;
+  z-index: 99999;
+}
+body.show-chatbot .chatbot-toggler {
+  transform: rotate(90deg);
+}
+.chatbot-toggler span {
+  color: #fff;
+  position: absolute;
+}
+.chatbot-toggler span:last-child,
+body.show-chatbot .chatbot-toggler span:first-child  {
+  opacity: 0;
+}
+body.show-chatbot .chatbot-toggler span:last-child {
+  opacity: 1;
+}
+.chatbot {
+  position: fixed;
+  right: 35px;
+  bottom: 90px;
+  width: 420px;
+  background: #fff;
+  border-radius: 15px;
+  overflow: hidden;
+  opacity: 0;
+  pointer-events: none;
+  transform: scale(0.5);
+  transform-origin: bottom right;
+  box-shadow: 0 0 128px 0 rgba(0,0,0,0.1),
+              0 32px 64px -48px rgba(0,0,0,0.5);
+  transition: all 0.1s ease;
+  z-index: 99999;
+
+}
+.chatform{
+  width: 100%;
+  height: 450px;
+  background: var(--color);
+  font-family: 'Roboto', sans-serif;
+  z-index: 99999;
+
+
+}
+body.show-chatbot .chatbot {
+  opacity: 1;
+  pointer-events: auto;
+  transform: scale(1);
+}
+.chat_about p{
+  color: #fff !important;
+  font-family: 'Cairo', sans-serif;
+
+}
+.chatbot header {
+  padding: 16px 0;
+  position: relative;
+  text-align: center;
+  color: #fff;
+  background: var(--color);
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+.chatbot header span {
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  display: none;
+  cursor: pointer;
+  transform: translateY(-50%);
+}
+header h2 {
+  font-size: 1.4rem;
+  font-family: 'Cairo', sans-serif;
+
+}
+.chatbot .chatbox {
+  overflow-y: auto;
+  height: 510px;
+  padding: 30px 20px 100px;
+  display: none;
+}
+.chatbot :where(.chatbox, textarea)::-webkit-scrollbar {
+  width: 6px;
+}
+.chatbot :where(.chatbox, textarea)::-webkit-scrollbar-track {
+  background: #fff;
+  border-radius: 25px;
+}
+.chatbot :where(.chatbox, textarea)::-webkit-scrollbar-thumb {
+  background: #ccc;
+  border-radius: 25px;
+}
+.chatbox .chat {
+  display: flex;
+  list-style: none;
+}
+.chatbox .outgoing {
+  margin: 20px 0;
+  justify-content: flex-end;
+}
+.chatbox .outgoing {
+  font-family: 'Cairo', sans-serif;
+
+}
+.chatbox .chat p {
+  color: #fff;
+  max-width: 75%;
+  padding: 12px 16px;
+  border-radius: 10px 10px 0 10px;
+  font-size: 0.95rem;
+  background-color: var(--color);
+}
+.chatbox .incoming span{
+  width: 50px;
+  height: 50px;
+}
+.chatbox .incoming span img{
+  width: 50px;
+  height: 50px;
+}
+.chatbox .incoming p {
+  color: #000;
+  border-radius: 10px 10px 10px 0px;
+  background: #f2f2f2;
+  font-family: 'Cairo', sans-serif;
+
+}
+.chatbox li{
+  margin-bottom: 5px;
+}
+
+
+.chatbot .chat-input {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  gap: 5px;
+  background: #fff;
+  padding: 5px 20px;
+  border-top: 1px solid #ccc;
+  font-family: 'Cairo', sans-serif;
+
+}
+.chat-input textarea {
+  height: 55px;
+  width: 100%;
+  border: none;
+  outline: none;
+  resize: none;
+  padding: 15px 15px 16px 0;
+  font-size: 0.95rem;
+}
+
+.chat-input span {
+  align-self: flex-end;
+  height: 55px;
+  line-height: 55px;
+  color: var(--color);
+  font-size: 1.35rem;
+  cursor: pointer;
+}
+
+@media (max-width: 490px) {
+  .chatbot-toggler {
+    right: 20px;
+    bottom: 20px;
+  }
+  .chatbot ,.chatform {
+    right: 0;
+    bottom: 0;
+    height: 100%;
+    border-radius: 0;
+    width: 100%;
+  }
+  .chatbot .chatbox {
+    height: 90%;
+    padding: 25px 15px 100px;
+  }
+  .chatform{
+    height: 100%;
+  }
+  .chatbot .chat-input {
+    padding: 5px 15px;
+  }
+  .chatbot header span {
+    display: block;
+  }
+}
+#chattext{
+  display: none;
+}
+
+
+
+.chat_about{
+  text-align: center;
+}
+
+.chat_about p{
+  color: #000000;
+  margin: 0 10px 20px;
+}
+
+.chat_about img {
+  width: 150px;
+  height: 150px;
+}
+
+.chatform{
+  text-align: center;
+}
+
+.chatform input{
+  width: 70%;
+  margin: 8px 0;
+  outline: none;
+  box-sizing: border-box;
+  transition: 3s;
+  border-radius: 25px;
+  border: 1px solid #e1e1e1;
+  color: #3b3f5c;
+  font-size: 14px;
+  padding: 0.55rem 1.25rem;
+  
+}
+
+.letschatptn {
+  width: 60%;
+  font-size: 16px;
+  font-weight: 600;
+  color: #fff;
+  cursor: pointer;
+  margin: 10px 0;
+  height: 50px;
+  text-align:center;
+  border: none;
+  background-size: 300% 100%;
+  border-radius: 50px;
+  moz-transition: all .4s ease-in-out;
+  -o-transition: all .4s ease-in-out;
+  -webkit-transition: all .4s ease-in-out;
+  transition: all .4s ease-in-out;
+  box-shadow:  0 0 5px rgb(59, 137, 255), 0 0 25px rgb(59, 137, 255);
+}
+
+.letschatptn:hover {
+  background-position: 100% 0;
+  moz-transition: all .4s ease-in-out;
+  -o-transition: all .4s ease-in-out;
+  -webkit-transition: all .4s ease-in-out;
+  transition: all .4s ease-in-out;
+  box-shadow:  0 0 5px rgb(59, 137, 255), 0 0 25px rgb(59, 137, 255) , 0 0 50px rgb(59, 137, 255) , 0 0 100px rgb(59, 137, 255) 0 0 200px rgb(59, 137, 255);
+}
+
+.letschatptn:focus {
+  outline: none;
+}
+
+
+
+
+.letschatptn.color-1 {
+  background-image: linear-gradient(to right, #25aae1, #40a2e4, #07599c, #467cc2);
+  box-shadow:  0 0 5px rgb(59, 137, 255), 0 0 25px rgb(59, 137, 255);
+}
+
+
+
+/*  */
+
+.btn:hover{
+  border: none;
+}
+
+
+.options-list span{
+  align-self: flex-start;
+  height: 55px;
+  line-height: 55px;
+  color: var(--color);
+  font-size: 1.35rem;
+  cursor: pointer;
+}
+
+.options-list #list{
+  position: absolute;
+  width: 90%;
+  top: -285px;
+  display: none;
+  gap: 10px;
+  padding: 10px;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  border-radius: 10px 10px 0 0;
+  color: #fff;
+  background: var(--color);
+}
+
+#list button{
+  width: 100%; /* Buttons take up the full width of the container */
+  padding: 10px;
+  background-color: var(--color);
+  margin-bottom: 5px; /* Add some spacing between buttons */
+  border: 2px solid rgb(255, 255, 255);
+  color: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+  gap: 5px;
+}

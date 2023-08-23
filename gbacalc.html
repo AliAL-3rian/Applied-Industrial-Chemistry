@@ -1,0 +1,803 @@
+<!DOCTYPE html>
+<div style="display:none;">running</div>
+<html __expr-val-dir=&quot;rtl&quot; lang=&quot;ar-sa&quot; dir=&quot;rtl&quot; >
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge;Chrome=1;FF=3;OtherUA=4" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>GBA Calclatour AIC</title>
+
+    <link rel="icon" type="image/png" href="./image/ff.png" sizes="192*192">
+    <link rel="apple-touch-icon" sizes="180*180" type="image/png" href="./image/ff.png">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;800;900;1000&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" type="text/css" href="https://www.qu.edu.sa/css/bootstrap.min.css"/>
+    <link rel="stylesheet" type="text/css" href="https://www.qu.edu.sa/css/font-awesome.min.css"/>
+    <link rel="stylesheet" type="text/css" href="https://www.qu.edu.sa/css/bootstrap-rtl.min.css"/>
+        <!-- Owl Carousel -->
+    <link rel="stylesheet" href="https://www.qu.edu.sa/owl-carousel-2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="https://www.qu.edu.sa/owl-carousel-2.3.4/assets/owl.theme.default.min.css">
+    <link rel="stylesheet" href="./css/gba.css">
+    <!-- LightBox -->
+    <link rel="stylesheet" href="https://www.qu.edu.sa/lightbox/css/lightbox.min.css">
+
+            <link rel="stylesheet" type="text/css" href="https://www.qu.edu.sa/css/custom.css?v1.1"/>
+        <script src="https://www.qu.edu.sa/js/jquery.min.js"></script>
+    <script src="https://www.qu.edu.sa/js/bootstrap.min.js"></script>
+    <!-- Owl Carousel -->
+    <script src="https://www.qu.edu.sa/owl-carousel-2.3.4/owl.carousel.min.js"></script>
+    <!-- LightBox -->
+    <script src="https://www.qu.edu.sa/lightbox/js/lightbox.min.js"></script>
+    <!-- Hotjar Tracking Code for https://qu.edu.sa/ -->
+    <script>
+        (function(h,o,t,j,a,r){
+            h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+            h._hjSettings={hjid:2651430,hjsv:6};
+            a=o.getElementsByTagName('head')[0];
+            r=o.createElement('script');r.async=1;
+            r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+            a.appendChild(r);
+        })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+    </script>
+
+    <style>
+        .box-header {
+            border-bottom: solid 1px;
+            border-bottom-color: #dedede;
+        }
+
+        .box-header span{
+            border-bottom: solid 1px;
+            border-bottom-color: black;
+            padding-bottom: 5px;
+        }
+        .box-content {
+            background-color: white;
+            padding: 0px;
+        }
+
+        .news-item {
+            border-bottom: solid 1px;
+            border-bottom-color: #dedede;
+            display: inline-block;
+        }
+
+        .btn-qu {
+            background-color: #37a3ba;
+            color: white;
+        }
+
+        .news-item .title {
+            font-size: 11px;
+        }
+
+        .main-slider {
+            margin-top: 0px;
+        }
+
+        .vision-2030-logo {
+            height: 40px; 
+            padding-top: 5px;
+            margin-left: 45px;
+        }
+        .qu-main-logo {
+            height: 80px;
+        }
+        .header-main-bar {
+            position: fixed;
+            z-index: 100;
+            background-color: #f5f5f5; 
+            padding-top: 0px; 
+            color: #545454;
+            width: 100%;
+            margin: 0
+        }
+        @media (min-width: 1200px) {
+            .left-content {
+                margin-top: 20px;
+            }
+        }
+        @media (max-width: 768px) {
+            .qu-main-logo {
+                height: 65px;
+            } 
+        }
+    </style>
+
+</head>
+
+<body style="padding-top: 0px">
+<script>
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r;
+            i[r] = i[r] || function () {
+                        (i[r].q = i[r].q || []).push(arguments)
+                    }, i[r].l = 1 * new Date();
+            a = s.createElement(o),
+                    m = s.getElementsByTagName(o)[0];
+            a.async = 1;
+            a.src = g;
+            m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+
+        ga('create', 'UA-92768277-1', 'auto');
+        ga('send', 'pageview');
+
+    </script>
+
+
+<div id="header">
+    <style>
+    #main-services-button {
+        background: #37a3bb;
+        color: white;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 200;
+    }
+    .animation{
+        text-align: center;
+        display: block;
+        color: white;
+        box-shadow: 0px 0px 100px 15px #37a3bb;
+        animation: pulsate 5s ease-out infinite;
+    }
+
+    @-webkit-keyframes pulsate {
+        0%   { box-shadow: 0 0 0 rgba(0, 0, 0, 0); }
+        40%   { box-shadow: 0 0 0 rgba(0, 0, 0, 0); }
+        50%  { box-shadow: 0px 0px 150px 15px #37a3bb; }
+        60% { box-shadow: 0 0 0 rgba(0, 0, 0, 0); }
+        100% { box-shadow: 0 0 0 rgba(0, 0, 0, 0); }
+    }
+
+    .main-services-list {
+        padding-left: 0;
+        list-style: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 100;
+        background: #3091a7;
+        color: white;
+        padding: 15px;
+        padding-top: 100px;
+        height: 100%;
+        width: 320px;
+    }
+    .main-services-item {
+        float: right;
+        width: 31%;
+        height: 85px;
+        padding-top: 10px;
+        line-height: 1.4;
+        text-align: center;
+        background-color: #207b90;
+        margin: 2px;
+        color: white;
+    }
+    .main-services-item:hover {
+        background: #14436b;
+    }
+    .main-service-text {
+        margin-top: 10px;
+        font-size: 10px
+    }
+    .main-service-icon {
+        font-size: 2.3em;
+    }
+    .category-buttons li {
+        float: right;
+        padding: 10px;
+    }
+    .category-buttons li a{
+        color: white;
+        cursor: pointer;
+    }
+    .category-buttons li a:hover, .category-buttons li a.active{
+        text-decoration: none;
+        border-bottom: 1px solid #fff;
+    }
+</style>
+
+
+
+<div class="container">
+    <div class="adress">
+    <img src="./image/ff.png" alt="Logo"/>
+            <h1>Applied Industrial Chemistry</h1>
+            <h2>Faculty Of Science - Zagazig University</h2>
+            <h2>GBA Calclatour</h2>
+</div>
+</div>
+
+<div class="container mt-5">
+    <div class="Scientific trips">
+    <div class="title">
+    <p class="Gpa-title">GBA Calclatour</p>
+    </div>
+</div>
+</div>
+<!-- start popup -->
+
+<div class="popup" id="popup-1">
+    <div class="overlay"></div>
+    <div class="content">
+
+        <div class="front">
+            <button class="close-btn"onclick="togglePopup()">&times;</button>
+            <div class="table-header">
+    <h1>GPA 4</h1>
+    <h3>الدلالات الرقمية والرمزية للدرجات والتقديرات</h3>
+    </div>
+    <table class="table-gpa4">
+        <thead>
+        
+                <td>الدرجة</td>
+                <td>(GPA) عدد النقاط</td>
+                <td>الرمز</td>
+                <td>التقدير</td>
+
+        </thead>
+
+        <tbody>
+            <tr>
+                <td>100>90</td>
+                <td>4.00</td>
+                <td>A+</td>
+                <td>ممتاز مرتفع</td>
+            </tr>
+            <tr>
+                <td>90>85</td>
+                <td>3.667</td>
+                <td>A</td>
+                <td>ممتاز</td>
+            </tr>
+            <tr>
+                <td>85>80</td>
+                <td>3.333</td>
+                <td>B+</td>
+                <td>جيد جدا مرتفع</td>
+            </tr>
+            <tr>
+                <td>80>75</td>
+                <td>3.00</td>
+                <td>B</td>
+                <td>جيد جدا</td>
+            </tr>
+            <tr>
+                <td>75>70</td>
+                <td>2.667</td>
+                <td>C+</td>
+                <td>جيد مرتفع</td>
+            </tr>
+            <tr>
+                <td>70>65</td>
+                <td>2.333</td>
+                <td>C</td>
+                <td>جيد</td>
+            </tr>
+            <tr>
+                <td>65>60</td>
+                <td>2.00</td>
+                <td>D</td>
+                <td>مقبول</td>
+            </tr>
+            <tr>
+                <td>60>0</td>
+                <td>0.00</td>
+                <td>F</td>
+                <td>راسب</td>
+            </tr>
+        </tbody>
+        </table>
+    </div>
+    
+        <div class="back">
+            <button class="close-btn"onclick="togglePopup()">&times;</button>
+            <div class="table-header">
+        <h1>GPA 5</h1>
+        <h3>الدلالات الرقمية والرمزية للدرجات والتقديرات</h3>
+            </div>
+        <table class="table-gpa5">
+            <thead>
+            
+                    <td>الدرجة</td>
+                    <td>(GPA) عدد النقاط</td>
+                    <td>الرمز</td>
+                    <td>التقدير</td>
+
+            </thead>
+    
+            <tbody>
+                <tr>
+                    <td>100>90</td>
+                    <td>4.00 - 5.00</td>
+                    <td>A+</td>
+                    <td>ممتاز مرتفع</td>
+                </tr>
+                <tr>
+                    <td>90>85</td>
+                    <td>4.00 - 3.50</td>
+                    <td>A</td>
+                    <td>ممتاز</td>
+                </tr>
+                <tr>
+                    <td>85>83</td>
+                    <td>3.50 - 3.00</td>
+                    <td>B+</td>
+                    <td>جيد جدا مرتفع</td>
+                </tr>
+                <tr>
+                    <td>83>75</td>
+                    <td>3.00 - 2.50</td>
+                    <td>B</td>
+                    <td>جيد جدا</td>
+                </tr>
+                <tr>
+                    <td>75>73</td>
+                    <td>2.50 - 2.40</td>
+                    <td>C+</td>
+                    <td>جيد مرتفع</td>
+                </tr>
+                <tr>
+                    <td>73>65</td>
+                    <td>2.40 - 1.50</td>
+                    <td>C</td>
+                    <td>جيد</td>
+                </tr>
+                <tr>
+                    <td>65>60</td>
+                    <td>1.50 - 1.00</td>
+                    <td>D</td>
+                    <td>مقبول</td>
+                </tr>
+                <tr>
+                    <td>60>0</td>
+                    <td>0.00</td>
+                    <td>F</td>
+                    <td>راسب</td>
+                </tr>
+            </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+<button class="GBA-analyses" onclick="togglePopup()"> الدلالات الرقمية والرمزية للدرجات والتقديرات</button>
+
+<!-- end popup -->
+
+
+
+<div id="content" class="container">
+        <script src="https://www.qu.edu.sa/js/printThis.js"></script>
+    <div class="container" id="the-news">
+        </div>
+    </div>
+    <div class="container">
+
+        <div class="gpa-container">
+            <div class="row">
+                <div class="col-lg-6 col-md-6 col-sm-12">
+                    <div class="fieldset">
+                        <h4><span>المعدل التراكمي</span></h4>
+                        <div class="row">
+                            <div class="col-lg-6 col-md-6">
+                                <label> عدد الساعات السابقة</label>
+                            </div>
+                            <div class="col-lg-6 col-md-6">
+                                <input type="text" value="0" name="All_H" class="result form-control" id="prvCHour"/>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-6 col-md-6">
+                                <input type="radio" style="width: 20px;" id="rdRate" name="ratePoints"value="rate" checked="checked"/><label for="rdRate">
+                                    المعدل التراكمي السابق :</label>
+
+                            </div>
+                            <div class="col-lg-6 col-md-6">
+                                <input type="text" value="0" name="Last_D" class="result form-control" id="prvDegree"/>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-6 col-md-6">
+                                <input type="radio" style="width: 20px;" id="rdPoint" name="ratePoints" value="point"/>
+                                <label for="rdPoint">
+                                    النقاط (دقة 100%) :</label>
+                            </div>
+                            <div class="col-lg-6 col-md-6">
+                                <input type="text" value="0" name="Last_P" class="result form-control" id="prvPoint"/>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-12">
+                    <div class="fieldset">
+                        <h4><span>نظام GPA المستخدم</span></h4>
+                        <table>
+                            <tbody>
+                            <tr>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input type="radio" checked="checked" value="0" name="gpaSystem" id="gpaSystem4"style="width: 40px;"/>
+                                </td>
+                                <td>
+                                    <label for="gpaSystem4">
+                                        4.00
+                                    </label>
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row" style="padding-top: 20px">
+                <div class="col-lg-6 col-md-6 col-sm-12">
+                    <div class="fieldset">
+                        <h4><span>نتائج التراكمي</span></h4>
+                        <table>
+                            <tbody>
+                            <tr>
+                                <td>
+                                    <label>
+                                        عدد النقاط :</label>
+                                </td>
+                                <td>
+                                    <label id="totalPoint">
+                                    </label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <label>
+                                        عدد الساعات :</label>
+                                </td>
+                                <td>
+                                    <label id="totalHour">
+                                    </label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <label>
+                                        عدد الساعات المجتازة :
+                                    </label>
+                                </td>
+                                <td>
+                                    <label id="totaldoneHour"> <!--هنا التعديل -->
+                                    </label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <label>
+                                        المعدل:</label>
+                                </td>
+                                <td>
+                                    <label id="totalRate">
+                                    </label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <label>
+                                        التقدير:</label>
+                                </td>
+                                <td>
+                                    <label id="totalVal">
+                                    </label>
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-12">
+                    <div class="fieldset">
+                        <h4><span>نتائج الفصل</span></h4>
+                        <table>
+                            <tbody>
+                            <tr>
+                                <td>
+                                    <label>
+                                        عدد النقاط :</label>
+                                </td>
+                                <td>
+                                    <label id="totalTermPoint">
+                                    </label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <label>
+                                        عدد الساعات :</label>
+                                </td>
+                                <td>
+                                    <label id="totalTermHour">
+                                    </label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <label>
+                                عدد الساعات المجتازة : <!--هنا التعديل -->
+                                    </label>
+                                </td>
+                                <td>
+                                    <label id="totalTermdoneHour">
+                                    </label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <label>
+                                        المعدل:</label>
+                                </td>
+                                <td>
+                                    <label id="totalTermRate">
+                                    </label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <label>
+                                        التقدير:</label>
+                                </td>
+                                <td>
+                                    <label id="totalTermVal">
+                                    </label>
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <div class="note">
+                <h4> يُرجى كتابة مواد الرسوب ايضا للحصول على نتائج صحيحة </h4>
+            </div>
+            
+            <div class="row">
+                <div class="col-lg-12" style="overflow: auto;overflow-y: hidden; padding-top: 20px">
+                    <table class="table table-condensed" id="tabl">
+                        <thead>
+                        <tr>
+                            <td aria-placeholder="اسم الماده"><h4>اسم المادة</h4></td>
+                            <td aria-placeholder="الدرجه"><h4>الدرجة</h4></td>
+                            <td aria-placeholder="ع.الساعات"><h4>عدد الساعات</h4></td>
+                            <td aria-placeholder="التقدير"><h4>التقدير</h4></td>
+                            <td aria-placeholder=" ع.النفاط"><h4>عدد النقاط</h4></td>
+                            <th></th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>
+                                <div class="form-group">
+                                    <label for="Student" class="col-sm-6 control-label">[مـادة 01 ] :</label>
+                                    <!-- <div class="col-sm-6">
+                                        <input type="text" name="name" class="subjectName form-control"/>
+                                    </div> -->
+                                </div>
+                            </td>
+                            <td><input type="text" class="subjectDegree form-control"/></td>
+                            <td><input type="text" class="subjectHour form-control"/></td>
+                            <td>
+                                <select class="subjectRating form-control">
+                                    <option value="">غير محدد</option>
+                                    <option value="A+">A+</option>
+                                    <option value="A">A</option>
+                                    <option value="B+">B+</option>
+                                    <option value="B">B</option>
+                                    <option value="C+">C+</option>
+                                    <option value="C">C</option>
+                                    <option value="D">D</option>
+                                    <option value="F">F</option>
+                                </select>
+                            </td>
+                            <td><label class="subjectPoint"></label></td>
+                            <td><input type="checkbox" checked="checked" onclick="chek(this)" class=""/></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="form-group">
+                                    <label for="Student" class="col-sm-6 control-label">[مـادة 02 ] :</label>
+                                    <!-- <div class="col-sm-6">
+                                        <input type="text" name="name" class="subjectName form-control"/>
+                                    </div> -->
+                                </div>
+                            </td>
+                            <td><input type="text" class="subjectDegree form-control"/></td>
+                            <td><input type="text" class="subjectHour form-control"/></td>
+                            <td>
+                                <select class="subjectRating form-control">
+                                    <option value="">غير محدد</option>
+                                    <option value="A+">A+</option>
+                                    <option value="A">A</option>
+                                    <option value="B+">B+</option>
+                                    <option value="B">B</option>
+                                    <option value="C+">C+</option>
+                                    <option value="C">C</option>
+                                    <option value="D">D</option>
+                                    <option value="F">F</option>
+                                </select>
+                            </td>
+                            <td><label class="subjectPoint"></label></td>
+                            <td><input type="checkbox" checked="checked" onclick="chek(this)" class=""/></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="form-group">
+                                    <label for="Student" class="col-sm-6 control-label">[مـادة 03 ] :</label>
+                                    <!-- <div class="col-sm-6">
+                                        <input type="text" name="name" class="subjectName form-control"/>
+                                    </div> -->
+                                </div>
+                            </td>
+                            <td><input type="text" class="subjectDegree form-control"/></td>
+                            <td><input type="text" class="subjectHour form-control"/></td>
+                            <td>
+                                <select class="subjectRating form-control">
+                                    <option value="">غير محدد</option>
+                                    <option value="A+">A+</option>
+                                    <option value="A">A</option>
+                                    <option value="B+">B+</option>
+                                    <option value="B">B</option>
+                                    <option value="C+">C+</option>
+                                    <option value="C">C</option>
+                                    <option value="D">D</option>
+                                    <option value="F">F</option>
+                                </select>
+                            </td>
+                            <td><label class="subjectPoint"></label></td>
+                            <td><input type="checkbox" checked="checked" onclick="chek(this)" class=""/></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="form-group">
+                                    <label for="Student" class="col-sm-6 control-label">[مـادة 04 ] :</label>
+                                    <!-- <div class="col-sm-6">
+                                        <input type="text" name="name" class="subjectName form-control"/>
+                                    </div> -->
+                                </div>
+                            </td>
+                            <td><input type="text" class="subjectDegree form-control"/></td>
+                            <td><input type="text" class="subjectHour form-control"/></td>
+                            <td>
+                                <select class="subjectRating form-control">
+                                    <option value="">غير محدد</option>
+                                    <option value="A+">A+</option>
+                                    <option value="A">A</option>
+                                    <option value="B+">B+</option>
+                                    <option value="B">B</option>
+                                    <option value="C+">C+</option>
+                                    <option value="C">C</option>
+                                    <option value="D">D</option>
+                                    <option value="F">F</option>
+                                </select>
+                            </td>
+                            <td><label class="subjectPoint"></label></td>
+                            <td><input type="checkbox" checked="checked" onclick="chek(this)" class=""/></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="form-group">
+                                    <label for="Student" class="col-sm-6 control-label">[مـادة 05 ] :</label>
+                                    <!-- <div class="col-sm-6">
+                                        <input type="text" name="name" class="subjectName form-control"/>
+                                    </div> -->
+                                </div>
+                            </td>
+                            <td><input type="text" class="subjectDegree form-control"/></td>
+                            <td><input type="text" class="subjectHour form-control"/></td>
+                            <td>
+                                <select class="subjectRating form-control">
+                                    <option value="">غير محدد</option>
+                                    <option value="A+">A+</option>
+                                    <option value="A">A</option>
+                                    <option value="B+">B+</option>
+                                    <option value="B">B</option>
+                                    <option value="C+">C+</option>
+                                    <option value="C">C</option>
+                                    <option value="D">D</option>
+                                    <option value="F">F</option>
+                                </select>
+                            </td>
+                            <td><label class="subjectPoint"></label></td>
+                            <td><input type="checkbox" checked="checked" onclick="chek(this)" class=""/></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="form-group">
+                                    <label for="Student" class="col-sm-6 control-label">[مـادة 06 ] :</label>
+                                    <!-- <div class="col-sm-6">
+                                        <input type="text" name="name" class="subjectName form-control"/>
+                                    </div> -->
+                                </div>
+                            </td>
+                            <td><input type="text" class="subjectDegree form-control"/></td>
+                            <td><input type="text" class="subjectHour form-control"/></td>
+                            <td>
+                                <select class="subjectRating form-control">
+                                    <option value="">غير محدد</option>
+                                    <option value="A+">A+</option>
+                                    <option value="A">A</option>
+                                    <option value="B+">B+</option>
+                                    <option value="B">B</option>
+                                    <option value="C+">C+</option>
+                                    <option value="C">C</option>
+                                    <option value="D">D</option>
+                                    <option value="F">F</option>
+                                </select>
+                            </td>
+                            <td><label class="subjectPoint"></label></td>
+                            <td><input type="checkbox" checked="checked" onclick="chek(this)" class=""/></td>
+                        </tr>
+                        </tbody>
+                    </table>
+                    <div class="AddMore">
+                        <span><a href="#" style="color:#333333"><i class="fa fa-plus"aria-hidden="true"></i> أضف مادة</a> </span>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="copyright p-3">
+        <p class="p-2 mb-0">
+        Copyright© 2023 All Right Reserved <a class="foot-link" href="https://www.facebook.com/profile.php?id=100076168395834" target="_blank">A.I.C Zu</a></p>
+        powered By 
+        <a class="foot-link" href="profile.html" target="_blank">Ali Maher & Mohamed Sanad</a>@
+    </div>
+        <head>
+            <style type="text/css">
+                label {
+                    font-weight: 100 !important;
+                }
+
+                /*body{margin:0;padding:0;direction:rtl}fieldset{float:right;border:2px solid #cfe7ec;min-height:110px;min-width:250px}#container{margin:0 auto;background-color:#eaf3f5;padding-right:10px;padding-top:10px}.topregin{width:572px;height:265px;margin:0 auto 10px}.result{width:40px;border:1px solid #caebf2}#tabl{margin:0 auto;position:relative}#tabl th{padding:0 10px}#tabl td{border-top:1px solid #cfe7ec;text-align:center}.htable{color:#fff;padding:5px;background-color:#187698}tr.row1,tr.row2{border-bottom:1px solid #ccc;color:#187698}tr:hover.row1,tr:hover.row2{background-color:#d9e8eb}.subjectName,.subjectDegree,.subjectHour{background-color:#fff;border:1px solid #fff;margin:5px}.subjectName{width:160px}.subjectDegree,.subjectHour{width:60px}.AddMore{width:564px;height:30px;margin:0 auto;margin-top:20px;margin-bottom:20px}.AddMore span{float:left;margin-left:5px;line-height:30px}.overflow{height:33px;position:absolute;right:0;width:536px;z-index:500}*/
+            </style>
+        </head>
+        <script>
+            function printNews() {
+                $('#the-news').printThis();
+            }
+        </script>
+
+        <script>
+            (function (i, s, o, g, r, a, m) {
+                i['GoogleAnalyticsObject'] = r;
+                i[r] = i[r] || function () {
+                            (i[r].q = i[r].q || []).push(arguments)
+                        }, i[r].l = 1 * new Date();
+                a = s.createElement(o),
+                        m = s.getElementsByTagName(o)[0];
+                a.async = 1;
+                a.src = g;
+                m.parentNode.insertBefore(a, m)
+            })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+            ga('create', 'UA-27522412-1', 'auto');
+            ga('send', 'pageview');
+
+        </script>
+
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script src="./js/gba.js"></script>
+<script src="./js/all.min.js"></script>
+<script src="./js/bootstrap.bundle.min.js"></script>
+
+
+
+
+</body>
+</html>
+<!-- الاصدار : 2.2.32 -->

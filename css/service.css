@@ -1,0 +1,318 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;700;900;1000&family=Raleway:wght@500;700;900&family=Ubuntu:wght@700&display=swap');
+:root{
+    --color: #2978cb;
+    --bold-lead-color: #7a7a7a;
+    --light-lead-color: #f3f3f3;
+    --main-transition: 0.3s;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    font-family: 'Cairo', sans-serif;
+    font-family: 'Raleway', sans-serif;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+
+html{
+    font-family: 'Cairo', sans-serif;
+    font-family: 'Raleway', sans-serif;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+
+a{
+    text-decoration: none;
+}
+
+a:hover{
+    color: var(--color);
+}
+
+input{
+    outline: none;
+}
+
+::selection{
+  background-color: #023162;
+  color: white;
+}
+
+
+body{
+  background-color: #ffffff;
+}
+
+/* ************************************************************* */
+/* Start header */
+/* ************************************************* */
+.navbar{
+    /* background-color: var(--color); */
+    background-color: rgb(255, 255, 255);
+    box-shadow: 2px 1px 10px #c1c1c1;
+}
+
+.nav-link {
+padding: 7px;
+}
+
+li a {
+    display: inline !important;
+    color:black !important;
+    font-weight: bold;
+}
+
+
+.nav-item  a:hover{
+    background-color: var(--light-lead-color) !important;
+    color: var(--color) !important;
+    border-radius: 10px;
+}
+
+
+
+@media (max-width:1000px) {
+    li a {
+        color: rgb(255, 255, 255) !important;
+    }
+
+    .nav-item  a:hover{
+        background-color: var(--light-lead-color) !important;
+        color: var(--color) !important;
+    }
+}
+
+.active-a{
+background-color: var(--color);
+border-radius: 10px;
+color: white !important;
+}
+
+.navbar-nav  .chat{
+    background-color: var(--color);
+    border-radius: 10px;
+    width: 150px;
+    margin-left: 260px;
+}
+
+@media (max-width:1280px) {
+    .navbar-nav  .chat{
+        margin-left: 0;
+    }
+}
+
+@media (max-width:1024px) {
+    .navbar-nav  .chat{
+        margin-left: 0;
+    }
+
+}
+
+.nav-item svg{
+    color: var(--light-lead-color);
+    padding: 0 4px !important;
+}
+
+.nav-limkss{
+    display: flex;
+    font-weight: bold;
+    justify-content: space-between;
+    direction: rtl;
+
+}
+
+@media (max-width:912px) {
+    .nav-limkss{
+        display: block;
+        padding: 15px;
+    }
+}
+
+.navbar .navbar-toggler:focus{
+    box-shadow: none;
+}
+
+.navbar span{
+    color: var(--light-lead-color) !important;
+}
+
+.navbar-toggler{
+  background-color: var(--light-lead-color) !important;
+}
+
+.img-nav{
+    width: 100px;
+}
+
+@media (max-width:912px) {
+    .img-nav{
+        width: 70px;
+    }
+}
+
+/* ************************************************************* */
+/* End header */
+/* ************************************************* */
+
+/* start fixed*/
+.title{
+    direction: ltr;
+}
+
+.title p{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    position: relative;
+      width: 350px;
+      height: 50px;
+      text-align: center;
+      border-right:6px solid var(--color);
+      background-color: var(--light-lead-color);
+    }
+  
+    .title p::before{
+      content: "A.I.C";
+      position: absolute;
+      background-color: var(--color);
+      height: 100%;
+      line-height:1.6;
+      color: rgb(255, 255, 255);
+      width: 80px;
+      text-align: center;
+      top: 0;
+      left: 0;
+    }
+/* End fixd */
+/* Start service */
+
+.content{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+}
+
+.adress{
+    text-align: center;
+}
+
+.adress img{
+    width: 200px;
+}
+
+.adress h1 {
+    font-size: 20px;
+    margin-bottom: 5px;
+    color: rgb(0, 0, 0);
+}
+.adress h2 {
+    font-size: 15px;
+    margin-bottom: 30px;
+    color: rgb(0, 0, 0);
+}
+
+a {
+    text-decoration: none !important;
+    color: rgb(240,240,240) !important;
+}
+.content p {
+    margin-bottom: 0 !important;
+    font-family: 'Cairo', sans-serif !important;
+}
+
+
+.tile {
+    width: 100%;
+    background-color: var(--color);
+    margin: 7px;
+    border-radius: 17px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.tile:hover {
+    transition: cubic-bezier(.07, 1.41, .82, 1.41) 0.2s;
+    transform: scale(1.02);
+}
+
+.tile-share-button {
+    margin: 8px;
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
+    /* background-color: rgb(52,52,52); */
+}
+
+.tile-share-button svg {
+    margin-left: 12px;
+    margin-top: 10px;
+}
+
+
+.image-container {
+    height: 96px;
+    width: 96px;
+    border-radius: 48px;
+    overflow: hidden;
+}
+
+.image-container img {
+    height: 100%;
+}
+
+.icon {
+    margin: 4px 8px;
+    width: 44px;
+    height: 44px;
+}
+.copyright {
+    color: white;
+    background-color: rgba(0, 0, 0, 0) !important; 
+
+    text-align: center;
+}
+
+/* End service */
+
+/* Start Footer */
+  .footer{
+    background-color:var(--color);
+    color: rgb(255, 255, 255) !important;
+    overflow: hidden !important;
+}
+
+.foot-description p{
+    letter-spacing: 1px !important;
+}
+
+.copyright{
+    color: white !important;
+    background-color: #0d4581 !important;
+    text-align: center !important;
+}
+
+
+.Contact-details a{
+    display: block !important;
+    color: var(--color) !important;
+}
+
+.mylinkss a{
+    font-size: 30px !important;
+    color: white !important; 
+}
+
+.foot-link{
+    color: #00ffdd !important;
+}
+
+.foot-link:hover{
+    color: #969696;
+}
+/* End footer */
