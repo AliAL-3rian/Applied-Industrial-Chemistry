@@ -1,0 +1,47 @@
+:root {
+    --background-color: #0F1117; 
+    --header-background-color: #1A1F2E; 
+    --text-color: #ffffff; 
+    --button-background-color: #334155; 
+    --button-hover-background-color: #475569; 
+    --dropdown-background-color: #1e293b; 
+    --dropdown-hover-background-color: #334155; 
+    --card-background-color: #1A1F2E; 
+    --card-hover-background-color: #334155;
+    --icon-color: #60a5fa; 
+    --border-color: #334155; 
+}
+
+
+body.dark-mode {
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+header {
+    background-color: var(--header-background-color);
+}
+
+.language-switch button, #theme-toggle {
+    background-color: #334155;
+    color: #ffffff;
+}
+.icon-button {
+    background-color: var(--button-background-color);
+    color: var(--text-color);
+}
+
+.language-switch button:hover, #theme-toggle:hover {
+    background-color: var(--background-color);
+}
+
+.card {
+    background-color: var(--card-background-color);
+}
+
+.card:hover {
+    background-color: var(--card-hover-background-color);
+}
+.dropdown-menu button:hover {
+    background-color: var(--dropdown-hover-background-color);
+}
