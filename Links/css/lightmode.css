@@ -1,0 +1,71 @@
+:root {
+    --background-color: #f8f9fa;
+    --text-color: #000000;
+    --header-background-color: #ffffff;
+    --button-background-color: #e0e0e0;
+    --button-text-color: #000000;
+    --button-hover-background-color: #d6d6d6;
+    --dropdown-background-color: #ffffff;
+    --dropdown-text-color: #000000;
+    --dropdown-hover-background-color: #eaeaea;
+    --card-background-color: #0d6efd;
+    --card-hover-background-color: #084298;
+}
+
+/* الوضع النهاري */
+body.light-mode {
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+/* الرأس */
+header {
+    background-color: var(--header-background-color);
+    color: var(--text-color);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* الأزرار */
+.icon-button {
+    background-color: var(--button-background-color);
+    color: var(--button-text-color);
+    transition: background-color 0.3s;
+}
+
+.icon-button:hover {
+    background-color: var(--button-hover-background-color);
+}
+
+/* القائمة المنسدلة */
+.language-dropdown .dropdown-menu {
+    background-color: var(--dropdown-background-color);
+    color: var(--dropdown-text-color);
+}
+
+.language-dropdown .dropdown-menu button:hover {
+    background-color: var(--dropdown-hover-background-color);
+}
+
+/* البطاقات */
+.card {
+    background-color: var(--card-background-color);
+    color: #ffffff;
+    transition: background-color 0.3s, box-shadow 0.3s;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1); 
+}
+
+.card:hover {
+    background-color: var(--card-hover-background-color);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15); 
+}
+
+/* زر المشاركة داخل البطاقة */
+.share-button {
+    background-color: var(--button-background-color);
+    color: var(--button-text-color);
+    transition: background-color 0.3s;
+}
+
+.share-button:hover {
+    background-color: var(--button-hover-background-color);
+}
