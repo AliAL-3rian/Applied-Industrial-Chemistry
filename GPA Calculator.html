@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-translate="title">حاسبة المعدل التراكمي</title>
+    <link rel="icon" href="./assets/logo.png">
+
+
+    <link rel="stylesheet" href="./GPA-Calculator/css/layout.css">
+    <link rel="stylesheet" href="./GPA-Calculator/css/components.css">
+    <link rel="stylesheet" href="./GPA-Calculator/css/animations.css">
+    <link rel="stylesheet" href="./GPA-Calculator/css/responsive.css">
+    <link rel="stylesheet" href="./GPA-Calculator/css/theme.css">
+    <link rel="stylesheet" href="./GPA-Calculator/css/reset.css">
+    <link href="https://fonts.googleapis.com/css2?family=Almarai:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+</head>
+<body class="light-mode">
+    <header class="sticky-header">
+        <div class="header-container">
+            <div class="page-title">
+                <i class="fas fa-calculator icon-calculator"></i>
+                <div class="text-container">
+                    <h1 data-translate="title">حاسبة المعدل التراكمي</h1>
+                    <p data-translate="description">احسب معدلك الدراسي بسهولة ودقة</p>
+                </div>
+            </div>
+            <div class="header-actions">
+                <button id="theme-toggle" class="icon-button" aria-label="تبديل الوضع">
+                    <i class="fas fa-sun icon-theme" id="theme-icon"></i>
+                </button>
+                <div class="language-dropdown">
+                    <button id="language-button" class="icon-button" aria-label="تغيير اللغة">
+                        <i class="fas fa-globe icon-globe"></i>
+                        <span id="current-language">العربية</span>
+                    </button>
+                    <div class="dropdown-menu">
+                        <button class="dropdown-item" data-lang="ar">العربية</button>
+                        <button class="dropdown-item" data-lang="en">English</button>
+                    </div>
+                </div>
+                <div class="grading-system-dropdown">
+                    <button id="grading-system-button" class="icon-button" aria-label="تغيير نظام الدرجات">
+                        <i class="fas fa-graduation-cap icon-grading"></i>
+                        <span id="current-grading-system" data-translate="gradingSystem">نظام 4.0</span>
+                    </button>
+                    <div class="dropdown-menu">
+                        <button class="dropdown-item" data-grading="4.0">4.0</button>
+                        <button class="dropdown-item" data-grading="5.0">5.0</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <section id="previous-cumulative-container" class="fade-in">
+            <!-- بانر إدخال التراكمي -->
+        </section>
+
+        <section id="cumulative-term-container" class="fade-in">
+            <!-- بانر التراكمي -->
+        </section>
+
+        <section id="terms-container">
+            <!-- الفصول -->
+        </section>
+
+        <section class="tips-section fade-in">
+            <h2 data-translate="tips">نصائح لتحسين معدلك</h2>
+            <ul>
+                <li data-translate="tip1">ركز على المواد ذات الساعات العالية لأنها تؤثر بشكل أكبر على المعدل.</li>
+                <li data-translate="tip2">حاول تحسين درجاتك في المواد التي حصلت فيها على تقدير منخفض.</li>
+                <li data-translate="tip3">نظم وقتك جيدًا لتتمكن من مراجعة جميع المواد قبل الامتحانات.</li>
+            </ul>
+        </section>
+
+        <div class="btn-container">
+            <button class="btn add-more" id="add-term" data-translate="addTerm">
+                <i class="fas fa-plus icon-plus"></i>
+                إضافة فصل دراسي جديد
+            </button>
+            <button class="btn btn-info" id="export-pdf" data-translate="export">
+                تصدير كملف PDF
+            </button>
+            <button class="btn btn-warning" id="reset-data" data-translate="reset">
+                إعادة تعيين
+            </button>
+            <button class="btn btn-success" id="share-results" data-translate="share">
+                مشاركة النتائج
+            </button>
+        </div>
+    </main>
+
+    <footer>
+        <p>Created by <a href="https://www.facebook.com/AliMaherAlErian">Ali Al-3rian</a></p>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.8.2/jspdf.plugin.autotable.min.js"></script>
+    <script src="./GPA-Calculator/js/banners.js"></script>
+    <script src="./GPA-Calculator/js/terms.js"></script>
+    <script src="./GPA-Calculator/js/calculations.js"></script>
+    <script src="./GPA-Calculator/js/validation.js"></script>
+    <script src="./GPA-Calculator/js/save.js"></script>
+    <script src="./GPA-Calculator/js/languages.js"></script>
+    <script src="./GPA-Calculator/js/darkmode.js"></script>
+    <script src="./GPA-Calculator/js/main.js"></script>
+</body>
+</html>
