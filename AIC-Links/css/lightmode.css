@@ -1,0 +1,25 @@
+:root {
+    --background: #f8f9fa;
+    --text: #000000;
+    --text-muted: #666666;
+    --header-bg: #ffffff;
+    --button-bg: #e0e0e0;
+    --button-text: #000000;
+    --button-hover: #d6d6d6;
+    --dropdown-bg: #ffffff;
+    --dropdown-text: #000000;
+    --dropdown-hover: #eaeaea;
+    --card-bg: #0d6efd;
+    --card-hover: #084298;
+    --card-text: #ffffff;
+}
+
+body.light-mode {
+    background-color: var(--background);
+    color: var(--text);
+}
+
+header {
+    background-color: var(--header-bg);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}

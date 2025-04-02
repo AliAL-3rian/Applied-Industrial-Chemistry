@@ -1,0 +1,24 @@
+:root {
+    --background: #0F1117;
+    --text: #ffffff;
+    --text-muted: #a0a0a0;
+    --header-bg: #1A1F2E;
+    --button-bg: #334155;
+    --button-text: #ffffff;
+    --button-hover: #475569;
+    --dropdown-bg: #1e293b;
+    --dropdown-text: #ffffff;
+    --dropdown-hover: #334155;
+    --card-bg: #1A1F2E;
+    --card-hover: #334155;
+    --card-text: #ffffff;
+}
+
+body.dark-mode {
+    background-color: var(--background);
+    color: var(--text);
+}
+
+header {
+    background-color: var(--header-bg);
+}

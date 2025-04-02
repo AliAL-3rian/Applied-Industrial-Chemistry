@@ -1,0 +1,72 @@
+@media (max-width: 768px) {
+    .header-container {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .text-container h1 {
+        font-size: 26px;
+    }
+
+    .text-container p {
+        font-size: 14px;
+    }
+
+    .btn-container {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .statistics-section, .tips-section, .banner-bar {
+        padding: 20px;
+    }
+
+    .banner-container {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .banner-box {
+        min-width: 100%;
+    }
+
+    .term-table th, .term-table td {
+        padding: 8px;
+        font-size: 12px;
+    }
+
+    .form-control {
+        font-size: 12px;
+    }
+
+    .toast {
+        bottom: 20px;
+        right: 20px;
+        padding: 10px 20px;
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    .text-container h1 {
+        font-size: 22px;
+    }
+
+    .text-container p {
+        font-size: 12px;
+    }
+
+    .btn, .icon-button {
+        padding: 10px 16px;
+        font-size: 12px;
+    }
+
+    .dropdown-menu {
+        min-width: 120px;
+    }
+
+    .dropdown-menu button {
+        padding: 10px 12px;
+        font-size: 12px;
+    }
+}
