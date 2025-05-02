@@ -37,7 +37,7 @@ header {
 }
 
 .container {
-    max-width: 720px;
+    max-width: 1200px;
     margin: 20px auto;
     padding: 0 15px;
 }
@@ -71,7 +71,7 @@ header {
 
 .cards {
     display: grid;
-/*     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); */
+    grid-template-columns: repeat(2, 1fr); /* 2 أعمدة بنفس العرض */
     gap: 20px;
 }
 
