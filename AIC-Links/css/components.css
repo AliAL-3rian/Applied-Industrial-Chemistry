@@ -98,4 +98,18 @@
 @keyframes spin {
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
+
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    font-size: 14px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+footer a {
+    font-weight: 600;
+    text-decoration: none;
+    transition: color 0.3s;
 }
