@@ -22,4 +22,20 @@ body.light-mode {
 header {
     background-color: var(--header-bg);
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+}
+
+
+body.light-mode footer {
+    background-color: #f1f1f1;
+    color: var(--text-muted);
+}
+
+body.light-mode footer a {
+    color: var(--text);
+}
+
+body.light-mode footer a:hover {
+    color: var(--card-bg);
+    text-decoration: underline;
 }
