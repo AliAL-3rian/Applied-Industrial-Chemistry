@@ -8,6 +8,7 @@ const translations = {
         results: "Results",
         militaryEducation: "Military Education Registration",
         gpaCalculator: "GPA Calculator",
+        medicalCheck: "Medical Check Registration",
     },
     ar: {
         title: "الكيمياء التطبيقية الصناعية",
@@ -18,6 +19,7 @@ const translations = {
         results: "النتيجة",
         militaryEducation: "التسجيل في التربية العسكرية",
         gpaCalculator: "حساب المعدل الفصلي",
+        medicalCheck: "تسجيل الكشف الطبي",
     },
 };
 
@@ -62,4 +64,5 @@ document.addEventListener("click", (e) => {
     if (!languageButton.contains(e.target) && !dropdownMenu.contains(e.target)) {
         dropdownMenu.style.display = "none";
     }
+
 });
