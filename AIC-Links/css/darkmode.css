@@ -21,4 +21,19 @@ body.dark-mode {
 
 header {
     background-color: var(--header-bg);
+
+}
+
+body.dark-mode footer {
+    background-color: #1A1F2E;
+    color: var(--text-muted);
+}
+
+body.dark-mode footer a {
+    color: var(--text);
+}
+
+body.dark-mode footer a:hover {
+    color: var(--button-hover);
+    text-decoration: underline;
 }
